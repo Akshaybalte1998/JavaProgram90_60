@@ -46,7 +46,15 @@ public class Client {
 		int pincode =scan.nextInt();
 		Address a5 = new Address(city,pincode);
 		System.out.println(a5);
+
+		//using courier call to adres also
+
+		Address addr1=new Address("Pune", "411018");
+		Courier c1=new Courier(1, "Max", addr1);
+		System.out.println(c1);
 		
+		Courier c2=new Courier(2, "John", new Address("Mumbai","411001"));
+		System.out.println(c2);
 		
 		
 		
@@ -66,19 +74,3 @@ public class Client {
 }
 
 
-/*
- *    Scanner scanner = new Scanner(System.in);
-        
-        System.out.println("Enter courier id:");
-        int id = scanner.nextInt();
-        scanner.nextLine(); // Consume the newline character
-        
-        System.out.println("Enter courier name:");
-        String name = scanner.nextLine();
-        
-        System.out.println("Enter courier salary:");
-        double salary = scanner.nextDouble();
-        
-        // Create Courier object using user input
-        Courier courier = new Courier(id, name, salary);
- */
